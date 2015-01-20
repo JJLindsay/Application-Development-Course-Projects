@@ -1,4 +1,4 @@
-# mobile-app-course-projects
+# ITEC4550: mobile-apps-course-projects
 
 Assignment 1: Create an application that displays the joke of the day<br>
 Assignment 2:<br>
