@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_gravity="center_horizontal">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Gozinta"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="42sp" android:textSize="60sp" android:textColor="#ff898989"
+            android:focusable="false" android:visibility="visible"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/startButton"
+            android:layout_marginBottom="74sp" android:textSize="35sp" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:clickable="true"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2" android:layout_centerVertical="true"
+            android:background="@drawable/table_img"
+            android:scaleType="centerCrop" android:layout_alignParentEnd="true" android:layout_alignParentStart="true"
+            android:layout_marginLeft="50sp" android:layout_marginRight="50sp" android:layout_marginBottom="300sp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="J. Lindsay"
+            android:id="@+id/textView2" android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/imageView2" android:textStyle="bold|italic"/>
+</RelativeLayout>

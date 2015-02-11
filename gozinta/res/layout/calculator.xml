@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/result" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="69sp" android:textSize="30sp" android:hint="Results Window"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" android:id="@+id/linearLayout">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/numOfParty" android:layout_gravity="center_vertical"
+                android:hint="Enter Your Party Size Here" android:width="207sp"
+                android:textAlignment="center" android:gravity="center"
+                android:inputType="number"/>
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" android:layout_gravity="center_vertical" android:spinnerMode="dialog"
+                android:entries="@array/service"/>
+    </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/calculateButton" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="71sp" android:textSize="35sp" android:clickable="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/billEditTxt" android:layout_above="@+id/linearLayout"
+            android:layout_marginBottom="20sp"
+            android:layout_alignStart="@+id/result" android:hint="Enter Your Bill Here"
+            android:textAlignment="center" android:inputType="numberDecimal"/>
+</RelativeLayout>
