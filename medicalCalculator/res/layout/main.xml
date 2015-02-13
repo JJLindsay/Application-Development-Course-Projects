@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtResult"
+            android:textSize="30sp" android:layout_alignParentBottom="true" android:layout_alignStart="@+id/btnConvert"
+            android:layout_marginBottom="35dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert Patient Weight"
+            android:id="@+id/textView2"
+            android:textSize="35sp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"/>
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_centerVertical="true" android:layout_alignParentStart="true">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert Pounds to Kilograms"
+                android:id="@+id/radLbToKilo" android:layout_gravity="center_horizontal" android:checked="true"
+                android:textSize="18sp" android:layout_marginLeft="12dp" android:layout_marginTop="15dp"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert Kilograms To Pounds"
+                android:id="@+id/radKiloToLb" android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp" android:layout_marginTop="5dp" android:checked="false"
+                android:textSize="18sp"/>
+    </RadioGroup>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert Weight"
+            android:id="@+id/btnConvert"
+            android:background="#888888" android:textColor="#000000"
+            android:layout_above="@+id/txtResult" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/txtWeight"
+            android:hint="Weight of Patient" android:textSize="25sp"
+            android:textColor="#CCCCCC" android:gravity="center_horizontal" android:background="#FFFFFF"
+            android:clickable="true" android:longClickable="true"
+            android:layout_above="@+id/radioGroup" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="69dp"/>
+</RelativeLayout>
+
