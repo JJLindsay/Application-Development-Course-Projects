@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editTxtMoney" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="117dp" android:background="#FFFFFF" android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" android:minHeight="40dp"
+            android:textColor="#000000" android:textAlignment="center" android:hint="Enter an Amount"
+            android:textSize="24sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency Converter"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp" android:textSize="35sp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:id="@+id/btnConvert"
+            android:textSize="30sp" android:clickable="true"
+            android:background="#777777" android:textColor="#000000" android:textAlignment="center"
+            android:maxWidth="200dp" android:minWidth="120dp" android:layout_above="@+id/txtViewResult"
+            android:layout_centerHorizontal="true" android:layout_marginTop="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtViewResult"
+            android:layout_marginBottom="20dp" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:textSize="30sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:id="@+id/textView4"
+            android:textSize="30sp"
+            android:layout_above="@+id/spinnerTo" android:layout_alignStart="@+id/spinnerTo"
+            android:layout_marginStart="5dp"
+            />
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerTo" android:layout_gravity="center_vertical"
+            android:background="#ffff1914"
+            android:longClickable="false" android:clickable="true" android:entries="@array/Currencies"
+            android:layout_above="@+id/btnConvert"
+            android:layout_marginStart="200dp" android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" android:minWidth="190sp" android:minHeight="50sp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerFrom" android:layout_gravity="center_vertical"
+            android:background="#ff1518ff"
+            android:entries="@array/Currencies" android:clickable="true"
+            android:layout_above="@+id/btnConvert" android:layout_alignStart="@+id/editTxtMoney"
+            android:layout_marginEnd="200dp" android:minWidth="190sp" android:minHeight="50sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"
+            android:id="@+id/textView3"
+            android:textSize="30sp"
+            android:layout_above="@+id/spinnerFrom" android:layout_alignStart="@+id/spinnerFrom"/>
+</RelativeLayout>
+

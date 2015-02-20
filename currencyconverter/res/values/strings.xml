@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="Currencies">
+        <item>USD</item>
+        <item>CAD</item>
+        <item>MXN</item>
+        <item>EUR</item>
+        <item>JPY</item>
+    </string-array>
+</resources>
