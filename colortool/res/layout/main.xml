@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              >
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Color Tool"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp" android:textSize="50sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red:"
+            android:id="@+id/textViewRed"
+            android:textSize="35sp" android:layout_above="@+id/textViewGreen" android:layout_alignParentLeft="true"
+            android:layout_marginBottom="74dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green:"
+            android:id="@+id/textViewGreen"
+            android:textSize="35sp"
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Blue:"
+            android:id="@+id/textViewBlue"
+            android:textSize="35sp"
+            android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_marginBottom="171dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextBlue" android:layout_alignBottom="@+id/textViewBlue"
+            android:layout_centerHorizontal="true" android:numeric="integer"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show"
+            android:id="@+id/buttonShow"
+            android:layout_marginTop="37dp" android:layout_below="@+id/editTextBlue"
+            android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textViewDisplay"
+            android:textSize="54sp"
+            android:background="#888888"
+            android:layout_below="@+id/buttonShow" android:layout_centerHorizontal="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextGreen"
+            android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/textViewGreen"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextRed"
+            android:layout_alignTop="@+id/textViewRed" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+
