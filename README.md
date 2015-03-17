@@ -6,7 +6,7 @@ Assignment 3: Gozinta - Create a restaurant tip calculator for whatever the part
 Assignment 4: Medical Calculator - Converts from lbs to Kg and vice versa using radio buttons <br/>
 Assignment 5: Currency Converter - Converts 5 currencies to 5 others using AsyncTask, freeing the main thread<br/>
 Assignment 6: Color Tool - Accepts R, G, and B and changes the background color and display converts to hexidecimal form<br>
-Assignment 7: <br>
+Assignment 7: Omnipotent Billiard Ball - an imitation of the Magic 8 ball<br>
 Assignment 8: <br>
 Assignment 9: <br>
 Assignment 10: <br>
