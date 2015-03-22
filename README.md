@@ -5,7 +5,7 @@
 <b>Assignment 4:</b> Medical Calculator - Converts from lbs to Kg and vice versa using radio buttons <br/>
 <b>Assignment 5:</b> Currency Converter - Converts 5 currencies to 5 others using AsyncTask, freeing the main thread<br/>
 <b>Assignment 6:</b> Color Tool - Accepts RGB to change the background color and display the hexidecimal form<br>
-<b>Assignment 7:</b> Omnipotent Billiard Ball - an imitation of the Magic 8 ball<br>
+<b>Assignment 7:</b> Omnipotent Billiard Ball - an imitation of the Magic 8 ball. Flip over, wait of the bing, then shake<br>
 Assignment 8: <br>
 Assignment 9: <br>
 Assignment 10: <br>
