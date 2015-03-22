@@ -1,6 +1,6 @@
 # ITEC4550: Mobile Apps Course Projects
 
-Assignment 1: Joke-A-Day - Create an application that displays the joke of the day<br>
+<h3>Assignment 1:</h3> Joke-A-Day - Create an application that displays the joke of the day<br>
 Assignment 2: GrizzlyMaps - Create an application with 3 buttons and 4 activities.<br>
 Assignment 3: Gozinta - Create a restaurant tip calculator for whatever the party size.<br/>
 Assignment 4: Medical Calculator - Converts from lbs to Kg and vice versa using radio buttons <br/>
