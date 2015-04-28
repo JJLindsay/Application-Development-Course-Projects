@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acceleration Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // The watch id references the current `watchAcceleration`
+    var watchID = null;
+
+     // Audio player
+    var my_media = null;
+    var mediaTimer = null;
+
+    // Wait for device API libraries to load
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    function onDeviceReady() {
+        startWatch();
+    }
+
+
+
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+    // Start watching the acceleration
+    function startWatch() {
+
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
+
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+
+    // Stop watching the acceleration
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // onSuccess: Get a snapshot of the current acceleration
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+                            'Acceleration Y: ' + acceleration.y         + '<br />' +
+                            'Acceleration Z: ' + acceleration.z         + '<br />' +
+                            'Timestamp: '      + acceleration.timestamp + '<br />';
+
+        var songs = ["/android_asset/www/audio/ask_again.mp3",
+        "/android_asset/www/audio/ask_later.mp3",
+        "/android_asset/www/audio/better_not_now.mp3",
+        "/android_asset/www/audio/cannot_predict.mp3",
+        "/android_asset/www/audio/certain.mp3",
+        "/android_asset/www/audio/decidedly.mp3",
+        "/android_asset/www/audio/definitely.mp3",
+        "/android_asset/www/audio/dont_count.mp3",
+        "/android_asset/www/audio/doubt.mp3",
+        "/android_asset/www/audio/doubtful.mp3",
+        "/android_asset/www/audio/likely.mp3",
+        "/android_asset/www/audio/outlook.mp3",
+        "/android_asset/www/audio/outlook_not.mp3",
+        "/android_asset/www/audio/point_to_yes.mp3",
+        "/android_asset/www/audio/rely_on_it.mp3",
+        "/android_asset/www/audio/reply_hazy.mp3",
+        "/android_asset/www/audio/reply_no.mp3",
+        "/android_asset/www/audio/sources_say.mp3",
+        "/android_asset/www/audio/yes.mp3",
+        "/android_asset/www/audio/yes2.mp3"
+        ];
+
+
+        if (acceleration.z < -7 && (acceleration.y < -2 || acceleration.x < -2))
+        {
+            var num = Math.floor(Math.random() * 20);
+            playAudio(songs[num])
+        }
+
+    }
+
+    // onError: Failed to get the acceleration
+    function onError() {
+        alert('onError!');
+    }
+
+    </script>
+</head>
+<body>
+<h1>Omnipotent Eightball</h1>
+<p id="audio_position"></p>
+<p>getCurrentAcceleration</p>
+<div id="accelerometer">Waiting for accelerometer...</div>
+</body>
+</html>
