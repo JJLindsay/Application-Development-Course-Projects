@@ -8,3 +8,4 @@ Assignment 5: Currency Converter - Converts 5 currencies to 5 others using Async
 Assignment 6: Color Tool - Accepts R, G, and B and changes the background color and display converts to hexidecimal form<br>
 Assignment 7: Omnipotent Billiard Ball - an imitation of the Magic 8 ball<br>
 Assignment 8: Cordova Omnipotent Billiard Ball<br>
+
